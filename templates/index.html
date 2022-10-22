@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../static/css/login.css" />
+    <title>Predicting Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="{{ url_for('predict') }}" class="sign-in-form" method="post">
+            <h2 class="title">Predicting</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <select name="Brand" style="width: 80px;" class="in1">
+                <option value="0">Bajaj Discover</option>
+                <option value="1">Bajaj CT-100</option>
+                <option value="2">TVS Metro</option>
+                <option value="3">Bajaj Discover 125</option>
+                <option value="4">Yamaha Fz</option>
+                <option value="5">Bajaj Discover 150</option>
+                <option value="6">Yamaha FZ-S Version 2.0</option>
+                <option value="7">Bajaj Pulsar 135</option>
+                <option value="8">Honda Dio</option>
+                <option value="9">TVS Apache</option>
+                <option value="10">Honda CD125</option>
+                <option value="11">TVS Scooty Streak</option>
+                <option value="12">Bajaj Pulsar 150</option>
+                <option value="13">Yamaha Fz Version 2.0</option>
+                <option value="14">Hero Pleasure</option>
+                <option value="15">TVS NTORQ</option>
+                <option value="16">Bajaj Pulsar 180</option>
+                <option value="17">Bajaj Platina</option>
+                <option value="18">Bajaj Discover 100</option>
+                <option value="19">Bajaj Pulsar</option>
+                <option value="20">Yamaha FZ-S</option>
+                <option value="21">Bajaj Discover 135</option>
+                <option value="22">Demak DTM</option>
+                <option value="23">TVS Apache Rtr</option>
+                <option value="24">Honda MD 90</option>
+                <option value="25">Suzuki Gn125</option>
+                <option value="26">Hero Hunk</option>
+                <option value="27">TVS Scooty Pep Plus</option>
+                <option value="28">Bajaj Platina 100</option>
+                <option value="29">Honda Twister</option>
+                <option value="30">Honda CD 125 Benly</option>
+                <option value="31">Honda Cd 125</option>
+                <option value="32">Hero-Honda Hunk</option>
+                <option value="33">Bajaj Pulsar NS200</option>
+                <option value="34">TVS Scooty Pep</option>
+                <option value="35">Bajaj Pulsar 135 LS</option>
+                <option value="36">Hero Dash</option>
+                <option value="37">Honda Activa</option>
+                <option value="38">Honda Navi</option>
+                <option value="39">TVS Wego</option>
+                <option value="40">Yamaha Ray ZR Street Rally</option>
+                <option value="41">Bajaj Discover 125m</option>
+                <option value="42">TVS Ntorq Race Edition</option>
+                <option value="43">Yamaha Ray</option>
+                <option value="44">TVS Apache 180</option>
+                <option value="45">Yamaha Fz Version 3.0</option>
+                <option value="46">Honda Benly</option>
+                <option value="47">Yamaha Ray ZR</option>
+                <option value="48">Hero Dash Vx</option>
+                <option value="49">Bajaj Pulsar NS160</option>
+                <option value="50">Honda Activa I</option>
+                <option value="51">Bajaj V15</option>
+                <option value="52">Honda GRAZIA</option>
+                <option value="53">Hero Maestro</option>
+                <option value="54">Yamaha FZ-S Version 3.0</option>
+                <option value="55">Hero MAESTRO EDGE</option>
+                <option value="56">Yamaha Ray Z</option>
+                <option value="57">Honda CD125 Benly</option>
+                <option value="58">Yamaha Zr</option>
+                <option value="59">Yamaha R15</option>
+                <option value="60">Suzuki Gn125h</option>
+                <option value="61">Yamaha FZ-16</option>
+                <option value="62">Yamaha Tw</option>
+                <option value="63">Yamaha FZ-S Version 2</option>
+                <option value="64">Honda CB HORNET</option>
+                <option value="65">Suzuki Gixxer</option>
+                <option value="66">Suzuki Burgman</option>
+                <option value="67">Honda Hornet</option>
+                <option value="68">TVS Apache 200</option>
+                <option value="69">Honda AX-1</option>
+                <option value="70">Honda Dio Dx</option>
+                <option value="71">Yamaha MT-15</option>
+                <option value="72">Yamaha TW 200</option>
+                <option value="73">Honda Jade</option>
+                <option value="74">Yamaha Fz Version 2</option>
+              </select>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="text" name="Year" placeholder="Enter Year" size="80" required="required" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <select name="Transmission" style="width: 80px;" class="in1">
+                  <option value="0">Manual</option>
+                  <option value="1">Automatic</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="text" name="Capacity" placeholder="Enter Capacity" size="80" required="required" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="text" name="Mileage" placeholder="Enter Mileage" size="80" required="required" />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="text" name="USD_Rate" placeholder="Enter USD Rate" size="80" required="required" />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="text" name="Fuel_Price" placeholder="Enter Fuel Price" size="80" required="required" />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="text" name="Crude_Oil_Price" placeholder="Enter Crude Oil Price" size="80" required="required" />
+            </div>
+            <input type="submit" value="Predict" class="btn solid" />
+          </form>
+        </div>
+      </div>
+
+ <div class = "prediction">
+  <h1 id="result">{{ prediction_text }}</h1>
+</div>
+
+    </div>
+    <script src="../static/app.js"></script>
+  </body>
+</html>
